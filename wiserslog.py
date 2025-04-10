@@ -43,7 +43,7 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    if message.channel.name == "wisers-status":
+    if "wisers-status" in message.channel.name:
         content = message.content.lower()
         if "logging in" in content or "logging out" in content:
             status = "Login" if "logging in" in content else "Logout"
